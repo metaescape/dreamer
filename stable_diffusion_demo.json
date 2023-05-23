@@ -1,12 +1,12 @@
 {
-  "sd_model_checkpoint": "chilloutmix_NiPrunedFp32Fix",
+  "sd_model_checkpoint": "moonmix_fantasy",
   "seed": -1,
   "width": 612,
   "height": 200,
-  "prompt": "<lora:MoXinV1:0.6>, shukezouma, negative space,shuimobysim ,a (unicorn:1.4) beside a river, traditional chinese ink painting",
+  "prompt": "<lora:MoXinV1:0.4>, shukezouma, negative space,shuimobysim ,a (unicorn:1) beside a river, traditional chinese ink painting",
   "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,",
   "cfg_scale": 3,
-  "steps": 27,
+  "steps": 20,
   "sampler_index": "DPM++ 2M Karras",
   "override_settings": {
     "CLIP_stop_at_last_layers": 2
