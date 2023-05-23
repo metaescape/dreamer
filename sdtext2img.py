@@ -12,7 +12,12 @@ def parse():
     # add parser for ip, port, image_name and json_link
     parser.add_argument("-e", "--endpoint", type=str, default="127.0.0.1:7861")
     parser.add_argument("-o", "--out", type=str, default="")
-    parser.add_argument("-j", "--json", type=str, default="")
+    parser.add_argument(
+        "-f", "--file", type=str, default="", help="json file path"
+    )
+    parser.add_argument(
+        "-j", "--json", type=str, default="", help="json file path"
+    )
 
     args = parser.parse_args()
     return args
@@ -63,7 +68,7 @@ def text2image():
     args = parse()
     endpoint = args.endpoint
     image_name = args.out
-    json_link = args.json
+    json_link = args.json if args.json else args.file
 
     if not image_name.endswith(".png"):
         image_name = image_name + ".png"
